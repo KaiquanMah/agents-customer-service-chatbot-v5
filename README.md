@@ -2,7 +2,7 @@
 
 A conversational AI system built with LangGraph and Streamlit for analyzing the Bitext Customer Service dataset. The system implements a multi-agent architecture with persistent memory and intelligent query routing.
 
-Students: Yair Reichman, Kaiquan Mah
+Students: [Yair Reichman](https://github.com/Yairpt), [Kaiquan Mah](https://github.com/KaiquanMah)
 
 
 ## System Overview
