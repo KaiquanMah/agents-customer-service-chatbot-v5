@@ -346,6 +346,16 @@ def process_query(prompt):
                     else:
                         response_content = "I apologize, but I encountered an issue processing your request."
 
+                    # 'result' example from langgraph agent's ChatState
+                    # {
+                    #     "messages": [AIMessage(...), HumanMessage(...)],
+                    #     "query_type": "structured_agent",
+                    #     "user_summary": "User is asking about...",
+                    #     "conversation_count": 3,
+                    #     "last_query_type": "structured_agent",
+                    #     "current_session": "session_123456"
+                    # }
+                    # maybe st.success shows up too quickly and gets overwritten on the UI
                     # Display query classification if in planning mode
                     if planning_mode == "Planning" and "query_type" in result:
                         query_type = result["query_type"]
