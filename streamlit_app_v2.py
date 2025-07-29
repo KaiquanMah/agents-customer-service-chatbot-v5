@@ -145,6 +145,7 @@ with st.sidebar:
 
     with col2:
         if st.button("New Session"):
+            # GENERATE SESSION_ID BASED ON UTC+0 TIMESTAMP
             new_session_id = f"session_{datetime.now().strftime('%H%M%S')}"
             st.session_state.session_id = new_session_id
             st.session_state.messages = []
