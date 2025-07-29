@@ -284,6 +284,10 @@ def structured_agent(state: ChatState) -> ChatState:
                     {"role": "user", "content": tool_message}
                 ])
 
+
+                # this fix might work for single-tool calls
+                # also, if there is an error in the tool call, we still have the final_response.content
+                # instead of having only the exception (without earlier tool call results) -> if we shifted this return block below 'exception Exception as e' just outside the for loop, but before the else-statement
                 # CRITICAL FIX: Return NEW state, don't modify original
                 return {
                     **state,
